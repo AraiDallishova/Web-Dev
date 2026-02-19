@@ -1,25 +1,22 @@
-//======= Task1 ========
-//Create a page that shows a message “I’m JavaScript!”.
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>I'm JavaScript</title>
+  <title>JavaScript Tasks</title>
 </head>
 <body>
 
 <script>
-  alert("I’m JavaScript!");
-</script>
-
-</body>
-</html>
-
-
-
-//Working with variables
 'use strict';
 
+/* ==============================
+   1. I’m JavaScript
+============================== */
+alert("I’m JavaScript!");
+
+/* ==============================
+   2. Working with variables
+============================== */
 let admin;
 let name;
 
@@ -28,124 +25,93 @@ admin = name;
 
 alert(admin); // John
 
-
-//Giving the right name
+/* ==============================
+   3. Correct variable naming
+============================== */
 let planetName = "Earth";
-let planet = "Earth";
 let currentUserName = "John";
 
-
-//Uppercase const?
-const birthday = '18.04.1982';
-const age = someCode(birthday);
-//birthday можно писать в верхнем регистре:
+/* ==============================
+   4. Uppercase constants
+============================== */
 const BIRTHDAY = '18.04.1982';
+function someCode(date) {
+  return 2026 - 1982; // пример вычисления возраста
+}
+const age = someCode(BIRTHDAY);
 
+/* ==============================
+   5. Template strings output
+============================== */
+let user = "Ilya";
 
+alert(`hello ${1}`);       // hello 1
+alert(`hello ${"name"}`);  // hello name
+alert(`hello ${user}`);    // hello Ilya
 
-//What is the output of the script?
-let name = "Ilya";
+/* ==============================
+   6. Ask user name
+============================== */
+let userName = prompt("What is your name?");
+alert("Your name is: " + userName);
 
-alert( `hello ${1}` ); // hello 1
-
-alert( `hello ${"name"}` ); // hello name
-
-alert( `hello ${name}` ); // hello Ilya
-
-
-
-//Create a web-page that asks for a name and outputs it.
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Ask Name</title>
-</head>
-<body>
-
-<script>
-  'use strict';
-
-  let userName = prompt("What is your name?");
-  alert("Your name is: " + userName);
-
-</script>
-
-</body>
-</html>
-
-
-
-//POSTFIX AND PREFIX FORMS
+/* ==============================
+   7. Prefix vs Postfix
+============================== */
 let a = 1, b = 1;
 
-let c = ++a; // prefix
-let d = b++; // postfix
+let c = ++a;
+let d = b++;
 
-console.log("Postfix/Prefix:");
 console.log("a =", a); // 2
 console.log("b =", b); // 2
 console.log("c =", c); // 2
 console.log("d =", d); // 1
 
-
-//ASSIGNMENT RESULT
+/* ==============================
+   8. Assignment result
+============================== */
 let a2 = 2;
-
 let x = 1 + (a2 *= 2);
 
-console.log("Assignment result:");
 console.log("a2 =", a2); // 4
 console.log("x =", x);   // 5
 
+/* ==============================
+   9. Type conversions
+============================== */
+console.log("" + 1 + 0);      
+console.log("" - 1 + 0);      
+console.log(true + false);    
+console.log(6 / "3");         
+console.log("2" * "3");       
+console.log(4 + 5 + "px");    
+console.log("$" + 4 + 5);     
+console.log("4" - 2);         
+console.log("4px" - 2);       
+console.log("  -9  " + 5);    
+console.log("  -9  " - 5);    
+console.log(null + 1);        
+console.log(undefined + 1);   
+console.log(" \t \n" - 2);    
 
-//TYPE CONVERSIONS
-console.log("Type conversions:");
-
-console.log("" + 1 + 0);      // "10"
-console.log("" - 1 + 0);      // -1
-console.log(true + false);    // 1
-console.log(6 / "3");         // 2
-console.log("2" * "3");       // 6
-console.log(4 + 5 + "px");    // "9px"
-console.log("$" + 4 + 5);     // "$45"
-console.log("4" - 2);         // 2
-console.log("4px" - 2);       // NaN
-console.log("  -9  " + 5);    // "  -9  5"
-console.log("  -9  " - 5);    // -14
-console.log(null + 1);        // 1
-console.log(undefined + 1);   // NaN
-console.log(" \t \n" - 2);    // -2
-
-
-
-
-//FIX THE ADDITION
+/* ==============================
+   10. Fix the addition
+============================== */
 let num1 = prompt("First number?", 1);
 let num2 = prompt("Second number?", 2);
 alert(Number(num1) + Number(num2));
 
-
-
-
-/*
-==============================
- if (a string with zero)
-==============================
-*/
-
+/* ==============================
+   11. if ("0")
+============================== */
 if ("0") {
-  alert("Hello"); // YES, will be shown
+  alert("Hello");
 }
 
-
-
-/*
-==============================
-The name of JavaScript
-==============================
-*/
-
+/* ==============================
+   12. Official name of JS
+============================== */
 let answer = prompt('What is the “official” name of JavaScript?');
 
 if (answer === "ECMAScript") {
@@ -154,47 +120,27 @@ if (answer === "ECMAScript") {
   alert("You don’t know? ECMAScript!");
 }
 
-
-
-/*
-==============================
-Show the sign
-==============================
-*/
-
+/* ==============================
+   13. Show the sign
+============================== */
 let number = +prompt("Enter a number");
 
-if (number > 0) {
-  alert(1);
-} else if (number < 0) {
-  alert(-1);
-} else {
-  alert(0);
-}
+if (number > 0) alert(1);
+else if (number < 0) alert(-1);
+else alert(0);
 
+/* ==============================
+   14. Rewrite if → ?
+============================== */
+let a3 = 1;
+let b3 = 2;
 
-
-/*
-==============================
-Rewrite 'if' into '?'
-==============================
-*/
-
-let a = 1;
-let b = 2;
-
-let result = (a + b < 4) ? 'Below' : 'Over';
-
+let result = (a3 + b3 < 4) ? 'Below' : 'Over';
 alert(result);
 
-
-
-/*
-==============================
-Rewrite 'if..else' into '?'
-==============================
-*/
-
+/* ==============================
+   15. Login message
+============================== */
 let login = prompt("Enter login");
 
 let message =
@@ -205,140 +151,75 @@ let message =
 
 alert(message);
 
-
-
-'use strict';
-
-/*
-==============================
-Last loop value
-==============================
-*/
-
+/* ==============================
+   16. Last loop value
+============================== */
 let i1 = 3;
-
 while (i1) {
   alert(i1--);
 }
-// Last value: 1
 
-
-
-/*
-==============================
-while: prefix vs postfix
-==============================
-*/
-
-// Prefix
+/* ==============================
+   17. Prefix vs Postfix in while
+============================== */
 let i2 = 0;
 while (++i2 < 5) alert(i2);
-// 1,2,3,4
 
-// Postfix
 let i3 = 0;
 while (i3++ < 5) alert(i3);
-// 1,2,3,4,5
 
-
-
-/*
-==============================
-for: prefix vs postfix
-==============================
-*/
-
-// Postfix
+/* ==============================
+   18. for loop
+============================== */
 for (let i = 0; i < 5; i++) {
   alert(i);
 }
-// 0,1,2,3,4
 
-// Prefix
-for (let i = 0; i < 5; ++i) {
-  alert(i);
-}
-// 0,1,2,3,4
-
-// Both show same values
-
-
-
-/*
-==============================
-Output even numbers (2–10)
-==============================
-*/
-
+/* ==============================
+   19. Even numbers 2–10
+============================== */
 for (let i = 2; i <= 10; i++) {
-  if (i % 2 === 0) {
-    alert(i);
-  }
+  if (i % 2 === 0) alert(i);
 }
 
-
-
-/*
-==============================
-Replace for with while
-==============================
-*/
-
+/* ==============================
+   20. Replace for with while
+============================== */
 let j = 0;
-
 while (j < 3) {
   alert(`number ${j}!`);
   j++;
 }
 
-
-
-/*
-==============================
-Repeat until input > 100
-==============================
-*/
-
+/* ==============================
+   21. Repeat until > 100
+============================== */
 let num;
-
 do {
   num = prompt("Enter number greater than 100");
 } while (num <= 100 && num !== null && num !== "");
 
-
-
-
-/*
-==============================
-Output prime numbers
-==============================
-*/
-
+/* ==============================
+   22. Prime numbers
+============================== */
 let n = 10;
 
-for (let num = 2; num <= n; num++) {
-
+for (let numP = 2; numP <= n; numP++) {
   let isPrime = true;
 
-  for (let div = 2; div < num; div++) {
-    if (num % div === 0) {
+  for (let div = 2; div < numP; div++) {
+    if (numP % div === 0) {
       isPrime = false;
       break;
     }
   }
 
-  if (isPrime) {
-    alert(num);
-  }
+  if (isPrime) alert(numP);
 }
 
-
-/*
-==============================
- Rewrite "switch" into "if"
-==============================
-*/
-
+/* ==============================
+   23. switch → if
+============================== */
 let browser = prompt("Enter browser");
 
 if (browser === 'Edge') {
@@ -354,27 +235,25 @@ if (browser === 'Edge') {
   alert('We hope that this page looks ok!');
 }
 
+/* ==============================
+   24. if → switch
+============================== */
+let a4 = +prompt('a?', '');
 
-
-/*
-==============================
-Rewrite "if" into "switch"
-==============================
-*/
-
-let a = +prompt('a?', '');
-
-switch (a) {
+switch (a4) {
   case 0:
     alert(0);
     break;
-
   case 1:
     alert(1);
     break;
-
   case 2:
   case 3:
     alert('2,3');
     break;
 }
+
+</script>
+
+</body>
+</html>
