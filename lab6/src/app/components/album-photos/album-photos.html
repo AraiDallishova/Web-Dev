@@ -1,0 +1,26 @@
+<p>album-photos works!</p>
+<h2>Photos of Album {{albumId}}</h2>
+<div *ngIf="loading">Loading...</div>
+<div class="grid">
+  <div *ngFor="let photo of photos" class="photo">
+    <img [src]="photo.thumbnailUrl" [alt]="photo.title" />
+    <p>{{photo.title}}</p>
+  </div>
+</div>
+<button (click)="goBack()">Back</button>
+
+<style>
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.photo {
+  width: 150px;
+  text-align: center;
+}
+.photo img {
+  width: 100%;
+  border-radius: 5px;
+}
+</style>
